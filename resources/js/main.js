@@ -232,4 +232,4 @@ app.component('TriStateCheckbox', TriStateCheckbox);
 app.component('VirtualScroller', VirtualScroller);
 
 
-app.mount("#app");
+app.mount("#App");

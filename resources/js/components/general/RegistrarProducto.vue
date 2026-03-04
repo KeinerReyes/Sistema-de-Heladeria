@@ -165,8 +165,7 @@
             </div>
             <div id="botones">
             <button type="submit" class="btn btn-dark btn-lg custom-button mt-4" >Registrar</button>
-            <button type="button" class="btn btn-lg mt-4" id="registrarBtn" data-bs-toggle="modal" data-bs-target="#miModal">Registrar Perfume</button>
-            <button type="button" class="btn btn-primary  mt-4" id="botonAgregar" data-bs-toggle="modal" data-bs-target="#modalAgregarML">Agregar Mililitro</button>
+           
           </div>
           </form>
         </div>

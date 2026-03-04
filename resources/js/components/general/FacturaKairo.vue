@@ -16,8 +16,7 @@
             </div>    
             <div class="ActivarCodigo">
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="activarCodigo" @click="busqueda = busqueda === 0 ? 1 : 0">
-                    <label class="form-check-label" for="activarCodigo">Lociones</label>
+                    
                 </div>
             </div>
         </div>

@@ -13,6 +13,7 @@ use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\ApartadosController;
+use App\Http\Controllers\HeladeriaCasa;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -144,3 +145,52 @@ Route::get('/BuscarCodigoLocion ', [FacturaController::class, 'BuscarCodigoLocio
 Route::get('/RegistrarLociones ', [ControlInventario::class, 'RegistrarLociones']);
 Route::get('/SacarCodigos ', [ControlInventario::class, 'CodigosLociones']);
 Route::get('/AgrgarLociones ', [ControlInventario::class, 'AgrgarLociones']);
+
+
+
+//// rutas de la heladeria productos
+Route::get('/ProductosCasa', [HeladeriaCasa::class, 'IndexProductos']);
+Route::post('/RegistrarProductos', [HeladeriaCasa::class, 'RegistrarProductos']);
+Route::get('/ListarProductos', [HeladeriaCasa::class, 'ListarProductos']);
+Route::post('/ActualizarProducto', [HeladeriaCasa::class, 'ActualizarProducto']);
+Route::delete('/EliminarProducto/{id}', [HeladeriaCasa::class, 'EliminarProducto']);
+Route::post('/GuardarCategoria', [HeladeriaCasa::class, 'GuardarCategoria']);
+Route::get('/ListarCategorias', [HeladeriaCasa::class, 'ListarCategorias']);
+
+/// rutas de heladeria pero perfil 
+Route::get('/PerfilCasa', [HeladeriaCasa::class, 'IndexPerfilCasa']);
+Route::get('/NavCasa', [HeladeriaCasa::class, 'NavCasa']);
+Route::get('/getMonthlyDataCasa', [HeladeriaCasa::class, 'getMonthlyDataCasa']);
+Route::get('/SacarResumenCasa', [HeladeriaCasa::class, 'SacarResumenCasa']);
+
+/// facturas de helados 
+Route::get('/FacturaCasa', [HeladeriaCasa::class, 'IndexFacturaH']);
+Route::get('/ListarP', [HeladeriaCasa::class, 'ListarP']);
+Route::post('/FacturasImpri', [HeladeriaCasa::class, 'Facturas']);
+Route::get('/MesasDisponibles', [HeladeriaCasa::class, 'MesasDisponibles']);
+
+// rutas de pedidos IndexPedidos
+
+Route::get('/PedidosCasa', [HeladeriaCasa::class, 'IndexPedidos']);
+Route::get('/Pedidos', [HeladeriaCasa::class, 'pedidos'])->name('Pedidos'); 
+Route::post('/MesaG', [HeladeriaCasa::class, 'GuardarMesa']);
+Route::get('/ListarMesas', [HeladeriaCasa::class, 'ListarMesas']);
+Route::get('/DatosF', [HeladeriaCasa::class, 'Datos']);
+Route::post('/liberar-mesa', [HeladeriaCasa::class, 'liberarMesa']);
+///rutas de domiclio 
+Route::get('/Domicilio', [HeladeriaCasa::class, 'IndexDomi']); 
+Route::get('/Domis', [HeladeriaCasa::class, 'Domis']);
+Route::post('/Entrega', [HeladeriaCasa::class, 'Entrega']);
+Route::get('/SacarDescripcion', [HeladeriaCasa::class, 'SacarDescripcion']);
+
+//// control de rutas de control de facturas 
+Route::get('/FacturasControl', [HeladeriaCasa::class, 'IndexControlFacturas']);
+Route::get('/Facturas', [HeladeriaCasa::class, 'FacturasControl']);
+Route::post('/eliminar', [HeladeriaCasa::class, 'eliminar']);
+Route::get('/Ver', [HeladeriaCasa::class, 'Ver']);
+Route::get('/ganancias', [HeladeriaCasa::class, 'ganancias']);
+
+/// rutas de ganancias 
+Route::get('/Ganancias', [HeladeriaCasa::class, 'IndexGanancias']);
+Route::get('/DatosVentas', [HeladeriaCasa::class, 'DatosV']);
+Route::post('/eliminarCasa', [HeladeriaCasa::class, 'eliminarCasa']);

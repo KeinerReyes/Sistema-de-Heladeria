@@ -304,7 +304,6 @@ return [
     ],
 
     // Sidebar items:
-
     [
         'text' => 'blog',
         'url'  => 'admin/blog',
@@ -312,37 +311,42 @@ return [
     ],
 
     [
-        'header' => 'SISTEMA ADMINISTRATIVO'
+        'header' => 'SISTEMA ADMINISTRATIVO',
     ],
+
     [
-        'text' => 'Perfil',
-        'url'  => '/perfil',
-        'icon' => 'fas fa-user',
+        'text'    => 'KairosDm',
+        'icon' => 'fas fa-tshirt', // ícono de ropa
+
+        'submenu' => [
+            [
+                'text' => 'Perfil',
+                'url'  => '/perfil',
+                'icon' => 'fas fa-user',
+            ],
+            [
+                'text' => 'Inventario',
+                'url'  => '/Inventario',
+                'icon' => 'fas fa-box',
+            ],
+            [
+                'text' => 'Control de inventario',
+                'url'  => '/ControlInventario',
+                'icon' => 'fas fa-warehouse',
+            ],
+            [
+                'text' => 'Factura',
+                'url'  => '/Factura',
+                'icon' => 'fas fa-file-invoice-dollar',
+            ],
+            [
+                'text' => 'Cliente',
+                'url'  => '/clientes',
+                'icon' => 'fas fa-user',
+            ],
+        ],
     ],
-    [
-        'text' => 'Inventario',
-        'url'  => '/Inventario',
-        'icon' => 'fas fa-box',
-    ],
-    [
-        'text' => 'Control de inventario',
-        'url'  => 'ControlInventario',
-        'icon' => 'fas fa-warehouse',
-    ],
-    [
-        'text' => 'Factura',
-        'url'  => 'Factura',
-        'icon' => 'fas fa-file-invoice-dollar',
-    ],
-    [
-        'text' => 'Cliente',
-        'url'  => '/clientes',
-        'icon' => 'fas fa-user',
-    ],
-    
-    
-    
-    
+
    
 ],
 
